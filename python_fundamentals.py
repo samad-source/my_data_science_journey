@@ -58,4 +58,4 @@ password = input("Enter your password: ")
 if len(password) >= 8:
     print("Password Correct")
 else:
-    print(f"Password is too short")
+    print(f"Password is too short.")
