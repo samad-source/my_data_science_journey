@@ -56,5 +56,60 @@ if "Desire" in students:
 students.sort()
 print("Students sorted:",students)
 
+# Fix a Duplicated email list using set method
+emails = [
+    "azeezsamad@email.com",
+    "desire@gmail.com",
+    "azeezsamad@gmail",
+    "desire@gmail.com",
+    "damilola@gmail.com"
+]
+unique_emails = set(emails)
+print(unique_emails)
+          
+# Student Course Registration
+# Consider a university with students enrolled in two courses. 
+python_students = {"samad","elizabeth","desire","damilola","blessing","mariddiyyah"}
+css_class = {"samad","elizabeth","damilola","blessing","ade","shola"}
 
+# Find out students offering both courses
+both_courses = python_students.intersection(css_class)
+print("Students offering both courses:",both_courses)
 
+# Find out students offering python but not css
+python_only = python_students.difference(css_class)
+print("Students offering python but not css:",python_only)
+
+# Find out students offering css but not python
+css_only = css_class.difference(python_students)
+print("Students offering css but not python:",css_only)
+# Find All unique students 
+unique_students = python_students.union(css_class)
+print("All unique students:",unique_students)
+# Database Data Cleaning 
+cities = [ 
+"Lagos", 
+"Ibadan", 
+"Lagos", 
+"Abuja", 
+"Ibadan" 
+]
+
+unique_cities = set(cities)
+print(unique_cities)
+
+# User Permissions
+# Suppose an application has
+admin_permissions = {
+    "read",
+    "write",
+    "delete"
+}
+
+user_permissions = {
+    "read",
+    "write"
+}
+# determine which permissions an administrator has that a normal user does not: 
+admin_only_permissions = admin_permissions.difference(user_permissions)
+print("Admin only permissions:", admin_only_permissions)
