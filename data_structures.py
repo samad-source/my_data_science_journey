@@ -1,5 +1,8 @@
 # LIST IN PYTHON
 
+from itertools import count
+
+
 fruits = ["apple", "banana", "orange"] 
 fruits.append("mango")
 print(fruits)
@@ -151,14 +154,45 @@ print(coursemates)
 colleagues = [
     {"name":"samad","department": "data science","gpa": 4.24},
     {"name":"aisha","department": "computer science","gpa": 4.50},
-    {"name":"john","department": "data science","gpa": 3.80}
+    {"name":"john","department": "data science","gpa": 3.80},
+    {"name": "Mary", "department": "Cybersecurity", "gpa": 4.10}
 ]
 # print the names of all students whose GPA is greater than 4.0
 for colleague in colleagues:
-    if colleague["gpa"] > 4.0:
+    if colleague["gpa"] > 4.0 and colleague["department"] == "data science":
         print(colleague["name"])
-        
+
 for colleague in colleagues:
     if colleague["department"] == "data science":
         print(colleague["name"])
         
+count = 0
+for colleague in colleagues:
+    if colleague["gpa"] >= 4.0:
+        print(colleague["name"])
+        count += 1
+print(f"Total students with GPA >= 4.0: {count}")
+
+data = {
+    "students": [
+        {
+            "name": "Samad",
+            "scores": {"Python": 92, "SQL": 88}
+        },
+        {
+            "name": "Aisha",
+            "scores": {"Python": 95, "SQL": 91}
+        }
+    ]
+}
+# Get all student names
+name = [student["name"]for student in data["students"]]
+print(name)
+
+# Get all SQL scores
+sql_scores = [student["scores"]["SQL"] for student in data["students"]]
+print(sql_scores)
+
+# Get the names of students whose Python score is greater than 93
+high_python_scores = [student["name"] for student in data["students"] if student["scores"]["Python"] > 93]
+print(high_python_scores)
