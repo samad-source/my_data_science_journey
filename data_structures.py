@@ -114,3 +114,51 @@ user_permissions = {
 admin_only_permissions = admin_permissions.difference(user_permissions)
 print("Admin only permissions:", admin_only_permissions)
 
+#  STUDENT MANAGEMENT
+""" Consider a simple student management system.
+1. Retrieve student 1 record
+2. Retrieve student 2 score and update it
+3. add student 3
+    """
+coursemates:dict[str,dict[str,str|int]]= {
+    "stu001":{
+        "name": "Azeez",
+        "age": 50,
+        "score": 95
+    },
+    "stu002":{
+            "name": "Samad",
+            "age": 40,
+            "score": 85
+    }
+}
+print(coursemates)
+# Retriving student 1 record
+print(coursemates["stu001"])
+# Retrieve student 2 score and update it
+coursemates["stu002"]["score"] = 100
+print(coursemates["stu002"])
+
+#
+coursemates["stu003"] ={
+    "name": "John",
+    "age": 40,
+    "score": 85
+}
+print(coursemates)
+
+# MINI CHALLENGE
+colleagues = [
+    {"name":"samad","department": "data science","gpa": 4.24},
+    {"name":"aisha","department": "computer science","gpa": 4.50},
+    {"name":"john","department": "data science","gpa": 3.80}
+]
+# print the names of all students whose GPA is greater than 4.0
+for colleague in colleagues:
+    if colleague["gpa"] > 4.0:
+        print(colleague["name"])
+        
+for colleague in colleagues:
+    if colleague["department"] == "data science":
+        print(colleague["name"])
+        
