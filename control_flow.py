@@ -145,3 +145,28 @@ for user in users:
         print(f'User {user["name"]} is active')
     else:
         print(f'User {user["name"]} is inactive')
+
+# Number Search
+# Let's compare al three statements.Using break 
+numbers = [1, 2, 3, 4, 5] 
+
+for number in numbers:
+    if number == 3:
+       break
+    print(number)
+    
+for number in numbers:
+    if number == 3:
+       continue
+    print(number)
+    
+for number in numbers:
+    if number == 3:
+       pass
+    print(number)
+#  Processing Student Scores
+scores = [90, 75, 0, 85, 60]
+for s in scores:
+    if s == 0:
+        continue
+    print(s)
