@@ -196,3 +196,8 @@ print(sql_scores)
 # Get the names of students whose Python score is greater than 93
 high_python_scores = [student["name"] for student in data["students"] if student["scores"]["Python"] > 93]
 print(high_python_scores)
+
+departments = {
+    "Computer Science": ["Alice", "Bob", "Charlie"],
+    "Data Science": ["David", "Eve", "Frank"]
+}
