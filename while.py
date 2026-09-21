@@ -51,3 +51,17 @@ while password != "python123":
     password = input("Enter password: ") 
     print("Incorrect Password")
 print("Correct password.") 
+
+# Guessing Game
+import random
+secret_number = random.randrange(1,10)
+guess = None
+
+while guess != secret_number:
+    guess = int(input("Guess the number: "))
+    if guess < secret_number:
+        print(f"Number too Low !!!")
+    elif guess > secret_number:
+        print("Number too High")
+print("Correct Guess")
+
