@@ -44,4 +44,10 @@ while counter > 0:
     else:
         print("Invalid option. Please try again.")
         print(f"You have {counter} attempt left")
-        
+
+# PASSWORD VERIFIED        
+password = "" 
+while password != "python123": 
+    password = input("Enter password: ") 
+    print("Incorrect Password")
+print("Correct password.") 
