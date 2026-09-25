@@ -17,3 +17,25 @@ def calculate_average(students):
 result = calculate_average(students)
 print(result)
 
+# function 2
+def count_passed(students):
+        passed = 0
+        for student in students:
+            if student["score"] >= 50:
+                passed += 1
+                return passed
+
+results = count_passed(students)
+print(results)
+
+# function 3
+def get_excellent_score(students):
+    excellent = []
+    passed = 0
+    failed = 0
+    for student in students:
+        if student["score"] >= 75:
+            excellent = excellent.append(student["name"])
+            return excellent 
+grade = get_excellent_score(students)
+print(grade)
