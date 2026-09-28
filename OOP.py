@@ -3,3 +3,5 @@ class person:
         self.name = name
         self.age = age
         self.address = address
+
+name = int(input("Enter name"))
